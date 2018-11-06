@@ -3,6 +3,7 @@
 # Edit at https://www.gitignore.io/?templates=go,macos
 
 ### Go ###
+.idea
 # Binaries for programs and plugins
 *.exe
 *.exe~

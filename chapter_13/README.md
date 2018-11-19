@@ -4,6 +4,20 @@ Go 语言切片是对数组的抽象。
 
 Go 数组的长度不可改变，在特定场景中这样的集合就不太适用，Go中提供了一种灵活，功能强悍的内置类型切片("动态数组"),与数组相比切片的长度是不固定的，可以追加元素，在追加时可能使切片的容量增大。
 
+```cgo
+struct Slice{
+        
+    byte*    array; // actual data      
+    uintgo   len;   // number of elements    
+    uintgo   cap;   // allocated number of elements
+};
+```
+
+- 引用类型。但自身是结构体，值拷贝传递。
+- 属性 len 表示可用元素数量，读写操作不能超过该限制。
+- 属性 cap 表示最大扩容量，不能超出数组限制。
+- 如果 slice == nil，那么 len、cap 都为 0。
+
 ## 定义切片
 
 你可以声明一个未指定大小的数组来定义切片：

@@ -72,30 +72,30 @@ src 子目录通常包会含多种版本控制的代码仓库（例如 Git），
 
 ```bash
 bin/
-	streak                         # 可执行命令
-	todo                           # 可执行命令
+    streak                         # 可执行命令
+    todo                           # 可执行命令
 pkg/
-	linux_amd64/
-		code.google.com/p/goauth2/
-			oauth.a                # 包对象
-		github.com/nf/todo/
-			task.a                 # 包对象
+    linux_amd64/
+        code.google.com/p/goauth2/
+            oauth.a                # 包对象
+        github.com/nf/todo/
+            task.a                 # 包对象
 src/
-	code.google.com/p/goauth2/
-		.hg/                       # mercurial 代码库元数据
-		oauth/
-			oauth.go               # 包源码
-			oauth_test.go          # 测试源码
-	github.com/nf/
-		streak/
-		.git/                      # git 代码库元数据
-			oauth.go               # 命令源码
-			streak.go              # 命令源码
-		todo/
-		.git/                      # git 代码库元数据
-			task/
-				task.go            # 包源码
-			todo.go                # 命令源码
+    code.google.com/p/goauth2/
+        .hg/                       # mercurial 代码库元数据
+        oauth/
+            oauth.go               # 包源码
+            oauth_test.go          # 测试源码
+    github.com/nf/
+        streak/
+        .git/                      # git 代码库元数据
+            oauth.go               # 命令源码
+            streak.go              # 命令源码
+        todo/
+        .git/                      # git 代码库元数据
+            task/
+                task.go            # 包源码
+            todo.go                # 命令源码
 ```
 
 此工作空间包含三个代码库（goauth2、streak 和 todo），两个命令（streak 和 todo） 以及两个库（oauth 和 task）。

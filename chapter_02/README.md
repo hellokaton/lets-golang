@@ -4,10 +4,9 @@
 
 **系统需求**
 
-gc 编译器支持以下操作系统及架构。在开始前，请确保你的系统满足这些需求。 若你的OS及架构不在此列表中，那么 gccgo 可能支持你的设置， 详情请访问设置并使用gccgo。
+gcc 编译器支持以下操作系统及架构。在开始前，请确保你的系统满足这些需求。 若你的OS及架构不在此列表中，那么 gccgo 可能支持你的设置，详情请访问设置并使用 [gccgo](https://golang.org/doc/install/gccgo)。
 
-
-![IMAGE](quiver-image-url/F96609BD1616FC08AC1B66BA47D73EF2.jpg =897x166)
+![image](https://user-images.githubusercontent.com/3849072/49286514-5b31c580-f4d5-11e8-927e-b4a1e27248bb.png)
 
 - 仅当你打算用cgo时才需要gcc。
 - 只需为 Xcode安装命令行工具即可。 若你已经安装了Xcode 4.3+，只需从下载配置面板的组件标签内安装它即可。
@@ -20,15 +19,15 @@ tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 
 该压缩包的名称可能不同，这取决于你安装的Go版本和你的操作系统以及处理器架构。
 
-（此命令必须作为root或通过 sudo 运行）
+（此命令必须作为 root 或通过 sudo 运行）
 
 要将 `/usr/local/go/bin` 添加到 `PATH` 环境变量， 你需要将此行添加到你的 `/etc/profile`（全系统安装）或 `$HOME/.profile` 文件中：
 
 **安装到指定位置**
 
-Go二进制发行版假定它们会被安装到 `/usr/local/go` （或Windows下的 `c:\Go`）中，但也可将Go工具安装到不同的位置。 此时你必须设置 `GOROOT` 环境变量来指出它所安装的位置。
+Go 二进制发行版假定它们会被安装到 `/usr/local/go` （或Windows下的 `c:\Go`）中，但也可将Go工具安装到不同的位置。 此时你必须设置 `GOROOT` 环境变量来指出它所安装的位置。
 
-例如，若你将Go安装到你的home目录下，你应当将以下命令添加到 `$HOME/.profile` 文件中：
+例如，若你将 Go 安装到你的 home 目录下，你应当将以下命令添加到 `$HOME/.profile` 文件中：
 
 ```bash
 export GOROOT=/usr/local/go
@@ -59,15 +58,15 @@ go version
 
 go 工具为公共代码仓库中维护的开源代码而设计。 无论你会不会公布代码，该模型设置工作环境的方法都是相同的。
 
-Go代码必须放在工作空间内。它其实就是一个目录，其中包含三个子目录：
+Go 代码必须放在工作空间内。它其实就是一个目录，其中包含三个子目录：
 
-* src 目录包含Go的源文件，它们被组织成包（每个目录都对应一个包）
-* pkg目录存放编译好的库文件, 主要是*.a文件
-* bin 目录包含可执行命令
+* `src` 目录包含Go的源文件，它们被组织成包（每个目录都对应一个包）
+* `pkg` 目录存放编译好的库文件, 主要是*.a文件
+* `bin` 目录包含可执行命令
 
 go 工具用于构建源码包，并将其生成的二进制文件安装到 pkg 和 bin 目录中。
 
-src 子目录通常包会含多种版本控制的代码仓库（例如Git）， 以此来跟踪一个或多个源码包的开发。
+src 子目录通常包会含多种版本控制的代码仓库（例如 Git）， 以此来跟踪一个或多个源码包的开发。
 
 以下例子展现了实践中工作空间的概念：
 
@@ -116,8 +115,8 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 ## 开发工具
 
-- vscode
-- Goland
+- [vscode](https://code.visualstudio.com/)
+- [Goland](https://www.jetbrains.com/go/)
 
 
 
